@@ -151,5 +151,10 @@ uint32_t Read_ADC_Channel(uint32_t channel)
     return adc_value;
 
 }
+
+    float ADC_to_Voltage(uint32_t adc_value)
+    {
+        return (adc_value * 3.3f) / 4095.0f; // Convert ADC value to voltage
+    }
 /* USER CODE END 1 */
 
